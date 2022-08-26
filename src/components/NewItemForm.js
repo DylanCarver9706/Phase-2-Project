@@ -28,11 +28,12 @@ function NewItemForm({createItem}) {
 
   
     
-    // createItem(newItem);
-    // setTitle("")
-    // setPrice("")
-    // setCategory("")
-    // setDescription("")
+    createItem(newItem);
+    setTitle("")
+    setPrice("")
+    setCategory("")
+    setDescription("")
+    setImage("")
 
   }
 
