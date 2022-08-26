@@ -15,6 +15,7 @@ function ItemCard({ item }) {
             <p>Price: ${item.price}</p>
             <p>{item.category}</p>
             <p>* {item.description} *</p>
+            {/* <p>{item.inCart}</p> */}
             {addToCart ? (
         <button className="primary" onClick={handleAddToCart}>Add To Cart</button>
       ) : (
