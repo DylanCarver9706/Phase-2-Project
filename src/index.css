@@ -12,6 +12,21 @@ code {
     monospace;
 }
 
+button {
+  padding: 0.25rem 1rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+:root {
+  --green: rgb(39, 189, 39);
+}
+
+button.primary {
+  background-color: var(--green);
+  color: white;
+}
 
 .cards {
   list-style: none;
