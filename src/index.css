@@ -54,12 +54,12 @@ main {
 .new-item-form {
   padding: 2rem 1rem;
   margin: 2rem 0;
-  background-color: rgba(181, 250, 181, 0.5);
+  background-color: rgba(221, 47, 195, 0.5);
 }
 
 .new-item-form form {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .new-item-form input {

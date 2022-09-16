@@ -1,22 +1,20 @@
 import React, {useState} from "react";
 
 function NewItemForm({createItem}) {
-  const [title, setTitle] = useState("")
+  const [name, setName] = useState("")
   const [price, setPrice] = useState("")
   const [category, setCategory] = useState("")
-  const [description, setDescription] = useState("")
   const [image, setImage] = useState("")
   
   function submitHandler(event) {
       event.preventDefault()
 
       let newItem = {
-        title: title,
+        name: name,
         price: price,
-        category: category,
-        description: description
+        category: category
       }
-      fetch("https://fakestoreapi.com/products", {
+      fetch("http://localhost:9292/products", {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json',
@@ -29,10 +27,9 @@ function NewItemForm({createItem}) {
   
     
     createItem(newItem);
-    setTitle("")
+    setName("")
     setPrice("")
     setCategory("")
-    setDescription("")
     setImage("")
 
   }
@@ -42,10 +39,9 @@ function NewItemForm({createItem}) {
       <h2>New Item</h2>
       <form onSubmit={submitHandler}>
         <div className="inline fields" >
-          <input onChange={(e)=>setTitle(e.target.value)} value={title} type="title" name="title" placeholder="Title"/>
+          <input onChange={(e)=>setName(e.target.value)} value={name} type="name" name="name" placeholder="Name"/>
           <input onChange={(e)=>setPrice(e.target.value)} value={price} type="number" name="amount" placeholder="price" />
           <input onChange={(e)=>setCategory(e.target.value)} value={category} type="text" name="category" placeholder="Category" />
-          <input onChange={(e)=>setDescription(e.target.value)} value={description} type="text" name="description" placeholder="Description" />
           <input type="text" name="image" placeholder="Image URL" value={image} onChange={(e) => setImage(e.target.value)} />
         </div>
         <button className="ui button" type="submit">

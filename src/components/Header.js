@@ -8,8 +8,8 @@ function Header() {
       <section className="header-top">
         <section className="header-top__logo">
         
-        <img src={"https://danielarisa.com/wp-content/uploads/2022/08/download.png"} alt={"StuffMart"}/>
-        <a href="/" className="header-logo">Stuff Mart</a>
+        <img src={"https://i.pinimg.com/originals/91/c4/e7/91c4e7398cad49776acfeeb3b88f7ed8.png"} alt={"ClothingShop"}/>
+        <a href="/" className="header-logo"></a>
         </section>
         <section className="header-top__navbar">
           <section className="header-top__navigation">
@@ -18,14 +18,7 @@ function Header() {
           <hr className="header-top__seperator" />
         </section>
       </section>
-      <section className="header-bottom">
-        <section className="header-bottom__phone">
-          281-330-8004
-        </section>
-        <section className="header-bottom__email">
-          shopstuffmart@info.com
-        </section>
-      </section>
+      
     </section>
   )
 }

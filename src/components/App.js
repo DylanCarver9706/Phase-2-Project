@@ -15,13 +15,13 @@ function App() {
 
   
   useEffect(()=>{
-    fetch("https://fakestoreapi.com/products")
+    fetch("http://localhost:9292/products")
     .then(response=>response.json())
     .then(data=>setItems(data))
   },[])
 
   let filteredItems = items.filter(item => {
-    return item.title.toLowerCase().includes(searchTerm)
+    return item.name.toLowerCase().includes(searchTerm)
   })
 
   return (
@@ -29,7 +29,7 @@ function App() {
       <Header />
       <NewItemForm createItem={createItem}/>
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-      <ItemContainer items={filteredItems}/>
+      <ItemContainer items={filteredItems} setItems={setItems}/>
     </main>
   );
 }
