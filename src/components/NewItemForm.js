@@ -10,6 +10,7 @@ function NewItemForm({createItem}) {
       event.preventDefault()
 
       let newItem = {
+        image: image,
         name: name,
         price: price,
         category: category
@@ -17,6 +18,7 @@ function NewItemForm({createItem}) {
       fetch("http://localhost:9292/products", {
       method: 'POST',
       headers: {
+        "Accept": 'application/json',
         "Content-Type": 'application/json',
       },
       body: JSON.stringify(newItem)

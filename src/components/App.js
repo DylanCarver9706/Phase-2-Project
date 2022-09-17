@@ -21,7 +21,7 @@ function App() {
   },[])
 
   let filteredItems = items.filter(item => {
-    return item.name.toLowerCase().includes(searchTerm)
+    return item.name?.toLowerCase().includes(searchTerm)
   })
 
   return (
