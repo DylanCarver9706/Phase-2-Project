@@ -2,10 +2,21 @@ import React, { useState } from "react";
 
 function ItemCard({ item, setItems, items }) {
 
-    const [addToCart, setAddToCart] = useState(true)
+    const [addToCart, setAddToCart] = useState(!item.is_cart)
 
   const handleAddToCart = () => {
-    setAddToCart(addToCart => !addToCart)
+    console.log(item)
+    fetch(`http://localhost:9292/products/${item.id}`, {
+      method: 'PATCH',
+      headers: {
+        "Accept": 'application/json',
+        "Content-Type": 'application/json',
+      },
+      body: JSON.stringify({is_cart: !addToCart})
+    }).then(response=>{
+      setAddToCart(!addToCart)
+    })
+    
   }
 
   const handleDelete = () => {
